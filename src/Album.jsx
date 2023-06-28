@@ -113,31 +113,54 @@ function Album() {
       const [validatorRight, setvalidatorRight] = useState(true)
 
       const hadleArrowLeft = ()=>{
+        let contador = count
         if(count > 1){
-            setCount((prevCount) => prevCount - 1)
-            setObject(songs[count])
+            contador = contador - 1
+            setCount(contador)
+            setObject(songs[contador])
             setvalidatorRight(true)
-            console.log(songs[count])
+            console.log(songs[contador])
         }else{
-            setCount((prevCount) => prevCount - 1)
-            setObject(songs[count])
+            contador = contador -1
+            setCount(contador)
+            setObject(songs[contador])
             setvalidatorLeft(false)
         }
 
       }
 
       const hadleArrowRight = () =>{
-        if(count < songs.length -1){
-            console.log(count)
-            setCount((prevCount) => prevCount + 1)
-            console.log('entró: ' + count)
-            setObject(songs[count])
+        let contador = count
+        if(count < songs.length -2){
+            console.log('contador: '+contador)
+            contador += 1
+            setCount(contador)
+            console.log('Nuevo contador: ' + contador)
+            setObject(songs[contador])
             setvalidatorLeft(true)
-            console.log(songs[count])
+            console.log(songs[contador])
         }else{
-            setCount((prevCount) => prevCount + 1)
-            setObject(songs[count])
+            contador += 1
+            setCount(contador)
+            setObject(songs[contador])
             setvalidatorRight(false)
+        }
+      }
+
+      const handleChangeFill = () =>{
+        if(object.like){
+
+            setObject(artist => ({
+                ...artist,
+                like: false
+            })
+            )
+        }else{
+            setObject(artist => ({
+                ...artist,
+                like: true
+            })
+            )
         }
       }
   
@@ -147,7 +170,7 @@ function Album() {
             {validatorLeft && <span className="material-symbols-rounded" onClick={hadleArrowLeft}>arrow_back_ios</span>}
             <div className='container'>
                 <img src="../public/album_cover.jpg" alt="" />
-                <AlbumInfo objeto = {object}></AlbumInfo>
+                <AlbumInfo objeto = {object} handleChangeFill = {handleChangeFill} ></AlbumInfo>
             </div>
             {validatorRight && <span className="material-symbols-rounded" onClick={hadleArrowRight}>arrow_forward_ios</span>}
         </div>
