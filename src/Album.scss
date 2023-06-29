@@ -64,6 +64,12 @@ html{
     background-color: $white;
     border: 1px solid ; /* Establece un borde sólido */
     box-shadow: 0 0 10px $white;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 20px #fca311;
+      }
 
     img{
         width: 250px;

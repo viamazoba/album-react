@@ -7,7 +7,7 @@ import Genre from './Genre'
 function AlbumInfo(props) {
     //const [count, setCount] = useState(0)
 
-    const {objeto, handleChangeFill} = props
+    const {objeto, handleChangeFill, handleFill, fillValue} = props
   
     return (
 
@@ -15,7 +15,7 @@ function AlbumInfo(props) {
 
             <Artists objeto = {objeto}></Artists>
             <Disk objeto = {objeto}></Disk>
-            <Genre objeto = {objeto} handleChangeFill = {handleChangeFill}></Genre>
+            <Genre objeto = {objeto} handleChangeFill = {handleChangeFill} handleFill= {handleFill} fillValue = {fillValue}></Genre>
         </div>
     )
   }

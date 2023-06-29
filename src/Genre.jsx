@@ -3,21 +3,7 @@ import './Album.css'
 
 function Genre(props) {
     //const [count, setCount] = useState(0)
-    const {objeto, handleChangeFill} = props
-    const [fillValue, setFillValue] = useState(objeto.like?1:0);
-
-    
-
-    const handleFill = () => {
-
-        if(fillValue){
-            handleChangeFill
-            setFillValue(0)
-        }else{
-            handleChangeFill
-            setFillValue(1)
-        }
-      };
+    const {objeto, handleFill, fillValue} = props
 
     return (
 
