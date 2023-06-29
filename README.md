@@ -16,11 +16,12 @@ Este proyecto, llamado "Album-React", tiene como finalidad proporcionar una intr
 1. Clona este repositorio en tu máquina local.
 2. Navega hasta el directorio raíz del proyecto.
 3. Ejecuta el siguiente comando para instalar las dependencias:
-   npm install
-
+- npm install
+ 
 4.Una vez finalizada la instalación, puedes ejecutar el proyecto con el siguiente comando:
 
-npm start
+- npm start
+
 Esto iniciará la aplicación en el navegador.
 
 
@@ -36,6 +37,6 @@ Si deseas contribuir a este proyecto, sigue los siguientes pasos:
 
 Agradecemos mucho las contribuciones al proyecto.
 
-## Autore🖋️
+## Autor🖋️
 
 - **Víctor Mazo** - [viamazoba](https://github.com/viamazoba)
